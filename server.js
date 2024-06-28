@@ -20,10 +20,10 @@ try {
 } catch (error) {
     console.error('Unable to connect to the database:', error);
 }
-// (async () => {
-//     await db.sync({ alter: true });
-//     console.log('DB synced');
-// })();
+(async () => {
+    await db.sync({ alter: true });
+    console.log('DB synced');
+})();
 
 // set body parser
 app.use(bodyParser.json())
