@@ -86,12 +86,12 @@ export const logout = (req, res) => {
             console.log(err);
             return res.status(500).json({
                 message: 'Logout failed'
-            })
+            });
         }
-    })
+        res.clearCookie('connect.sid', { path: '/' });
 
-    return res.json({
-        message: 'Logout successful'
-    })
-
-}
+        res.status(200).json({
+            message: 'Logout successful'
+        });
+    });
+};

@@ -17,6 +17,7 @@ export const index = async (req, res) => {
 
     const report = await Report.findAndCountAll({
         where: { ...filter },
+        order: [['createdAt', 'DESC']],
         include: [{
             model: Evidence
         }]
