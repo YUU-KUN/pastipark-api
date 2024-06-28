@@ -1,6 +1,6 @@
 import express from 'express'
 
-import { index, show, create, update, destroy } from '../controllers/userController.js'
+import { index, show, create, update, destroy } from '../controllers/UserController.js'
 
 const userRoute = express.Router()
 
