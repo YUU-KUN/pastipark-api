@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 const host = process.env.HOST || 'localhost';
 
 try {
-    await db.authenticate();
+    db.authenticate();
     console.log('Connection has been established successfully.');
 } catch (error) {
     console.error('Unable to connect to the database:', error);
